@@ -15,7 +15,7 @@ public class Consumer {
     @KafkaListener(topics = "com.ng.vela.even.card_verified", groupId = "group_id")
     public void consume(String message) throws IOException {
         log.info(String.format("#### -> Consumed message -> %s", message));
-        newMessage += message+"\n";
+        newMessage += message+",";
     }
 
     public String getConsumedMessage(){
